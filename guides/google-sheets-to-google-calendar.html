@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to add Google Sheets rows to Google Calendar (2026 guide) — EventRows</title><meta name="description" content="Three ways to turn a Google Sheets schedule into Google Calendar events: by hand, with Apps Script, or with a free add-on that also updates and deletes events."><link rel="icon" href="../logo.svg">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="../style.css"></head>
+<body><div class="wrap"><header class="nav"><a class="logo" href=".././"><img src="../logo.svg" width="30" height="30" alt="">EventRows</a>
+<nav><a href="../#how">How it works</a><a href="../#pricing">Pricing</a><a href="../#faq">FAQ</a></nav></header><article>
+<h1>How to add events from Google Sheets to Google Calendar (2026)</h1>
+<p>You have a schedule in Google Sheets™ — classes, shifts, lessons, a content plan — and you want it in Google Calendar™ so people get reminders on their phones. Here are three ways, from free-and-manual to automatic.</p>
+<h2>Option 1: Import a CSV (one-off, no updates)</h2>
+<ol>
+<li>Rename your columns to <code>Subject</code>, <code>Start Date</code>, <code>Start Time</code>, <code>End Date</code>, <code>End Time</code>, <code>Location</code>, <code>Description</code>.</li>
+<li>File → Download → Comma-separated values (.csv).</li>
+<li>In Google Calendar: Settings → Import &amp; export → Import, choose the file and the calendar.</li>
+</ol>
+<p><b>Catch:</b> it's a one-time copy. Change a time in the sheet and the calendar won't know; import again and you get duplicates.</p>
+<h2>Option 2: A small Apps Script (free, for the technical)</h2>
+<p>Extensions → Apps Script, paste and run:</p>
+<pre>function addEvents() {
+  const cal = CalendarApp.getDefaultCalendar();
+  const rows = SpreadsheetApp.getActiveSheet().getDataRange().getValues().slice(1);
+  rows.forEach(([title, start, end]) =&gt; {
+    if (title &amp;&amp; start &amp;&amp; end) cal.createEvent(title, new Date(start), new Date(end));
+  });
+}</pre>
+<p><b>Catch:</b> every run creates the events again. To update or delete you need to store event IDs, handle time zones, text dates, all-day events and API limits — that's where most scripts break.</p>
+<h2>Option 3: EventRows (free to start, keeps everything in sync)</h2>
+<ol>
+<li>Install <a href="../">EventRows</a> from the Google Workspace Marketplace.</li>
+<li>Extensions → EventRows → Open, pick a calendar.</li>
+<li>Check the detected columns (Title, Date, Time, End, Location, Guests) and press <b>Sync</b>.</li>
+</ol>
+<p>Edit a row and sync again — the same event updates. Delete a row — the event is removed. Rows with a problem are listed with their row number instead of silently failing. The free plan covers 30 new events a month.</p>
+<h2>Tips for a clean schedule sheet</h2>
+<ul>
+<li>One event per row; keep the header row at the top.</li>
+<li>Use real date cells (Format → Number → Date) or ISO text like <code>2026-09-25</code>.</li>
+<li>Overnight shifts: put 22:00 as start and 06:00 as end — EventRows moves the end to the next day.</li>
+<li>Guests: put emails in one cell separated by commas; they receive invitations.</li>
+</ul>
+</article><footer>© 2026 EventRows · <a href="../privacy.html">Privacy</a> · <a href="../terms.html">Terms</a> · <a href="https://github.com/DBohdan01/eventrows-site/issues">Support</a><br>
+Google Sheets™, Google Calendar™ and Google Workspace™ are trademarks of Google LLC. EventRows is not affiliated with Google.</footer></div></body></html>

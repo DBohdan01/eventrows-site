@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EventRows — Google Sheets™ to Google Calendar™ sync</title>
+<meta name="description" content="Turn Google Sheets rows into Google Calendar events. Edit a row and the event updates; delete it and the event goes away. Free to start, honest pricing, fast support.">
+<link rel="alternate" hreflang="de" href="de/">
+<link rel="alternate" hreflang="en" href="./">
+<link rel="alternate" hreflang="es" href="es/">
+<link rel="alternate" hreflang="fr" href="fr/">
+<link rel="alternate" hreflang="pt" href="pt/">
+<link rel="icon" href="logo.svg">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="nav">
+    <a class="logo" href="./"><img src="logo.svg" width="30" height="30" alt="">EventRows</a>
+    <nav><a href="#how">How it works</a><a href="#pricing">Pricing</a><a href="guides/google-sheets-to-google-calendar.html">Guide</a><a href="#faq">FAQ</a><a href="de/">DE</a> <a href="./" aria-current=page>EN</a> <a href="es/">ES</a> <a href="fr/">FR</a> <a href="pt/">PT</a></nav>
+  </header>
+
+  <div class="hero">
+    <h1>Your spreadsheet schedule,<br>in everyone's Google Calendar.</h1>
+    <p>EventRows turns rows in Google Sheets™ into Google Calendar™ events — and keeps them in sync. Change a row, the event updates. Delete it, the event disappears.</p>
+    <a class="btn" href="https://workspace.google.com/marketplace/search/EventRows">Install free from Google Workspace Marketplace</a>
+    <p class="small" style="margin-top:14px">30 new events a month free · no credit card · your data never leaves your Google account</p>
+  </div>
+
+  <div class="demo" aria-label="Example: rows become calendar events">
+    <table>
+      <tr><th>Class</th><th>Date</th><th>Time</th><th>Room</th></tr>
+      <tr><td>Yoga</td><td>25/09</td><td>18:00</td><td>Hall A</td></tr>
+      <tr><td>Pilates</td><td>26/09</td><td>10:00</td><td>Hall B</td></tr>
+      <tr><td>Boxing</td><td>26/09</td><td>19:30</td><td>Ring</td></tr>
+    </table>
+    <div class="arrow">➜</div>
+    <div class="cal">
+      <strong>Thu 25</strong><div class="ev">18:00 Yoga · Hall A</div>
+      <strong>Fri 26</strong><div class="ev">10:00 Pilates · Hall B</div><div class="ev">19:30 Boxing · Ring</div>
+    </div>
+  </div>
+
+  <section id="how">
+    <h2>Three steps. About a minute.</h2>
+    <div class="grid">
+      <div class="card"><div class="step">STEP 1</div><h3>Open EventRows</h3><p>Extensions → EventRows → Open. Pick the calendar the events should go to.</p></div>
+      <div class="card"><div class="step">STEP 2</div><h3>Check the columns</h3><p>We detect Title, Date, Time, End, Location, Description and Guests from your headers in 8 languages. Adjust if needed.</p></div>
+      <div class="card"><div class="step">STEP 3</div><h3>Press Sync</h3><p>Events appear in Google Calendar. Edit the sheet and sync again: changed rows update, removed rows are deleted.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Built for schedules that live in a spreadsheet</h2>
+    <div class="grid">
+      <div class="card"><h3>Studios &amp; gyms</h3><p>Class timetable in a sheet, every coach sees their classes on their phone.</p></div>
+      <div class="card"><h3>Shift rotas</h3><p>Plan shifts in Sheets, staff get them in Google Calendar with reminders.</p></div>
+      <div class="card"><h3>Schools &amp; tutors</h3><p>Lesson plans, exams and deadlines — one sheet, one calendar.</p></div>
+      <div class="card"><h3>Content &amp; events</h3><p>Publishing plans, bookings and event programmes stay in step.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Why people switch to EventRows</h2>
+    <div class="grid">
+      <div class="card"><h3>Sync that keeps its promises</h3><p>Every row is linked to its event, so updates and deletes hit the right event. A typo in a row never deletes an event — it's reported with the row number.</p></div>
+      <div class="card"><h3>Honest pricing</h3><p>A real free tier, a low monthly price, and a one-time Lifetime option if you only sync a few times a year.</p></div>
+      <div class="card"><h3>Support that answers</h3><p>Write to us and get a reply within one business day. Not happy in the first 14 days? Full refund, no questions.</p></div>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <h2>Pricing</h2>
+    <div class="grid">
+      <div class="card"><h3>Free</h3><div class="price">$0</div><ul><li>30 new events / month</li><li>Unlimited updates &amp; deletes</li><li>Import from Calendar</li></ul><a class="btn ghost" href="https://workspace.google.com/marketplace/search/EventRows">Install</a></div>
+      <div class="card featured"><h3>Pro</h3><div class="price">$4.99<span>/month</span></div><ul><li>Unlimited events</li><li>All sheets &amp; calendars</li><li>Priority support</li><li>or $39/year</li></ul><a class="btn" href="#" data-checkout="pro">Get Pro</a></div>
+      <div class="card"><h3>Lifetime</h3><div class="price">$59<span> once</span></div><ul><li>Everything in Pro</li><li>Pay once, keep forever</li><li>Great for occasional use</li></ul><a class="btn ghost" href="#" data-checkout="lifetime">Buy Lifetime</a></div>
+    </div>
+    <p class="small">After purchase you receive a license key by email. Paste it into EventRows → Plan → License key.</p>
+  </section>
+
+  <section id="faq">
+    <h2>FAQ</h2>
+    <details><summary>What date and time formats work?</summary><p>Real date cells in any format, plus text like 2026-09-25, 25.09.2026, 9/25/2026, 18:30 or 6:30 PM. A time can be in its own column or in the date cell.</p></details>
+    <details><summary>What happens if I delete a row?</summary><p>On the next sync the matching event is deleted (you can switch this off). Rows with errors are never deleted — you see the row number and the reason.</p></details>
+    <details><summary>Can I bring existing events into a sheet?</summary><p>Yes: “Import events from a calendar” creates a new sheet. Edit it and sync back.</p></details>
+    <details><summary>Where is my data stored?</summary><p>In your spreadsheet and your calendar only. EventRows runs inside your Google account and does not copy your data to our servers. See the <a href="privacy.html">Privacy</a>.</p></details>
+    <details><summary>Does it sync automatically?</summary><p>Today you press Sync (or use the menu). Hourly auto-sync is next on the roadmap.</p></details>
+  </section>
+
+  <footer>
+    © 2026 EventRows · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="https://github.com/DBohdan01/eventrows-site/issues">Support</a><br>
+    Google Sheets™, Google Calendar™ and Google Workspace™ are trademarks of Google LLC. EventRows is not affiliated with Google.
+  </footer>
+</div>
+</body>
+</html>
